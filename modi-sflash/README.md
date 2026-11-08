@@ -1,6 +1,6 @@
 # MODI SFlash Beta 1
 
-![MODI SFlash](assets/cover.png)
+![MODI SFlash](assets/cover-memory.png)
 
 **A breakthrough in simplicity. Back up your PS5 SFlash before you mess with it.**
 
