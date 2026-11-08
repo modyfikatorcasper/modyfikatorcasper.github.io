@@ -2,7 +2,11 @@
 
 ![MODI SFlash](assets/cover.png)
 
-Free PS5 homebrew for hobbyists and repair diagnostics. Back up the console-exposed SFlash image to USB, verify two saved copies, and view available Active Time and recorded EMC/thermal events.
+**A breakthrough in simplicity. Your PS5. Your backup. One press.**
+
+Press **X** to save two verified SFlash copies to USB. Discover recorded console operating time and available thermal/error history in one easy-to-use, free homebrew app for hobbyists and repair diagnostics. Before experimenting with unfamiliar homebrew or system changes, preserve a verified SFlash reference for diagnostics and future recovery work.
+
+**Language: [English](https://modyfikatorcasper.github.io/modi-sflash/?lang=en) · [Polski](https://modyfikatorcasper.github.io/modi-sflash/?lang=pl)**
 
 **[Download Beta 1](downloads/MODI-SFlash-Beta-1.zip)** · **[Project page](https://modyfikatorcasper.github.io/modi-sflash/)** · [Checksums](downloads/SHA256SUMS.txt)
 
@@ -29,13 +33,29 @@ The engine is embedded in the application. **No separate ELF or payload-folder c
 
 The images are PC-rendered previews with clearly marked sample data, including sample thermal events. They are not measurements from an additional console.
 
-## Beta test scope
+## Console verification and pending targets
 
-The embedded engine is byte-for-byte identical to the engine that completed a verified backup on **one PS5 running 13.60**. Both stored copies were 2 MiB and matched. The final Beta 1 frontend has passed PC compilation and rendering checks; this exact frontend is not yet retested on a console. Other firmware and hardware revisions are not confirmed. PS5 Pro testing is pending.
+The MODI team reports the following console verification. **All completed console tests listed below used firmware 13.60.**
 
-Unavailable readings remain unavailable. Recorded thermal events are not a guarantee of the highest lifetime temperature and do not diagnose a cooling fault on their own.
+| Console | Model | Firmware | Status |
+| --- | --- | --- | --- |
+| FAT | CFI-1016 | 13.60 | Verified — reported by MODI |
+| FAT | CFI-1116 | 13.60 | Verified — reported by MODI |
+| Slim | CFI-2016 | 13.60 | Verified — reported by MODI |
+| Slim | CFI-2116 | 13.60 | Verified — reported by MODI |
+| PS5 Pro | Pending | 13.20 | Pending |
 
-The app copies the SFlash image exposed by the console. A verified software read is not proof of full physical NOR coverage or a tested chip-programmer recovery procedure.
+Additional firmware targets: **13.12 — Pending; 13.20 — Pending; 13.40 — Pending.** Pending does not mean compatibility is confirmed.
+
+The embedded engine is identical to the engine independently checked against a completed 13.60 backup: both stored copies were 2 MiB and matched. The final Beta 1 frontend passed PC compilation/rendering checks; this exact frontend is not yet retested on a console.
+
+High recorded temperatures can guide a cooling inspection and assessment of the thermal interface. Available records are not a guarantee of the highest lifetime temperature or proof that thermal material must be replaced.
+
+## Planned programming tool
+
+We plan to release a chip-programming tool for the community, to simplify writing a suitable, verified backup directly to a flash chip. The tool and recovery workflow remain in development. Physical-chip recovery using this app's backup has not yet been validated.
+
+The app copies the SFlash image exposed by the console. SSD contents, game saves and optical-drive pairing recovery are outside the verified backup scope. A verified software read is not proof of full physical NOR coverage.
 
 ## Credits and notices
 

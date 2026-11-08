@@ -1,21 +1,159 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MODI SFlash Beta 1 — PS5 USB backup</title>
-<meta name="description" content="Free PS5 homebrew: two verified SFlash copies on USB, Active Time and recorded EMC/thermal events. Beta 1, with an embedded engine.">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MODI SFlash Beta 1 — PS5 backup made simple</title>
+<meta name="description" content="A breakthrough in simplicity: two verified SFlash copies on USB, recorded Active Time and thermal history in one free PS5 homebrew app.">
 <link rel="canonical" href="https://modyfikatorcasper.github.io/modi-sflash/">
-<meta property="og:title" content="MODI SFlash Beta 1"><meta property="og:description" content="Back up your PS5 SFlash from the console menu. Two copies, SHA-256, Active Time and EMC history.">
+<meta property="og:title" content="MODI SFlash Beta 1 — PS5 backup made simple"><meta property="og:description" content="Press X. Save two verified SFlash copies. Discover recorded operating time and thermal history.">
 <meta property="og:image" content="https://modyfikatorcasper.github.io/modi-sflash/assets/cover.png"><meta name="twitter:card" content="summary_large_image">
 <style>
 :root{color-scheme:dark;--bg:#0b160f;--panel:#192d1e;--line:#38583c;--green:#a6e875;--text:#edf4e9;--muted:#afc2b0}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 system-ui,sans-serif}a{color:var(--green)}a:focus-visible{outline:3px solid var(--green);outline-offset:5px}.wrap{max-width:1120px;margin:auto;padding:0 24px}header{border-bottom:1px solid var(--line);background:#0b160ff5;position:sticky;top:0;z-index:3}.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}.brand{font:700 18px/1.3 ui-monospace,monospace;text-decoration:none}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.12em}nav{display:flex;gap:22px;flex-wrap:wrap}nav a{text-decoration:none;font-size:14px}.hero{padding:42px 0 38px}.cover{width:100%;height:auto;border:1px solid var(--line);display:block}h1{font-size:clamp(34px,6vw,58px);line-height:1.1;margin:28px 0 16px;letter-spacing:-.03em}h2{font-size:30px;line-height:1.2;margin:0 0 22px}h3{font-size:21px;line-height:1.3;margin:10px 0}p{color:var(--muted)}.intro{font-size:20px;max-width:800px}.eyebrow,.tag{font:700 12px/1.4 ui-monospace,monospace;color:var(--green);letter-spacing:.08em}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);padding:13px 20px;font-weight:750}.primary{background:var(--green);color:#10200e;border-color:var(--green)}.small{font-size:13px;color:var(--muted)}section{padding:42px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:var(--panel);border:1px solid var(--line);padding:23px}.card p{font-size:16px}.steps{counter-reset:step;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px}.steps li{padding:23px;background:var(--panel);border:1px solid var(--line)}.steps li:before{counter-increment:step;content:'0' counter(step);display:block;font:700 25px/1.2 ui-monospace,monospace;color:var(--green);margin-bottom:12px}code{overflow-wrap:anywhere;color:var(--text);font-size:.9em}.note{border-left:3px solid var(--green);background:var(--panel);padding:16px 20px}.gallery{display:grid;gap:24px}figure{margin:0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line)}figcaption{font-size:13px;color:var(--muted);padding:9px 0}details{border:1px solid var(--line);padding:18px 22px;background:var(--panel)}summary{cursor:pointer;font-weight:700}.hash{font:12px/1.8 ui-monospace,monospace;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:30px 0 42px;font-size:14px}@media(max-width:700px){.wrap{padding:0 18px}.bar{flex-wrap:wrap;padding:15px 0;gap:12px}nav{gap:16px}.hero{padding-top:24px}.grid,.steps{grid-template-columns:1fr}section{padding:32px 0}.button{width:100%}.intro{font-size:18px}h2{font-size:26px}}
+
+
+/* BILINGUAL_COPY */
+.language{display:flex;gap:6px}.language button{font:700 13px ui-monospace,monospace;padding:9px 12px;min-height:40px;background:var(--panel);color:var(--text);border:1px solid var(--line);cursor:pointer}.language button[aria-pressed="true"]{background:var(--green);color:#10200e}.language button:focus-visible{outline:3px solid var(--green);outline-offset:3px}.pitch{max-width:850px;font-size:clamp(25px,4vw,36px);line-height:1.2;margin-top:28px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:15px;margin:18px 0 26px}th,td{padding:13px 15px;text-align:left;border:1px solid var(--line)}th{background:var(--panel)}.verified{color:var(--green)}.pending{color:#edc47b}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:700px){.language{margin-left:auto}.bar nav{order:3;width:100%}th,td{padding:10px;font-size:13px}}
 </style></head><body>
-<header><div class="wrap"><div class="bar"><a class="brand" href="../">MODI<small>DIAGNOSTIC LAB</small></a><nav aria-label="Project navigation"><a href="#download">Download</a><a href="#start">Getting started</a><a href="#screens">Screens</a><a href="#status">Beta status</a></nav></div></div></header>
-<main><div class="wrap hero"><img class="cover" src="assets/cover.png" width="1600" height="900" alt="MODI SFlash — verified USB backup, Active Time and EMC history">
-<h1>MODI SFlash <span style="color:var(--green)">Beta 1</span></h1><p class="intro">Back up the SFlash image exposed by your PS5, directly from the console menu. Two verified USB copies, available Active Time and recorded EMC events in one free homebrew app.</p>
-<div class="actions" id="download"><a class="button primary" href="downloads/MODI-SFlash-Beta-1.zip" download>Download Beta 1 · ZIP</a><a class="button" href="#start">How to use</a></div>
-<p class="small">For hobbyists and repair diagnostics · Embedded engine · Source flash is read-only</p></div>
-<section><div class="wrap grid"><article class="card"><span class="tag">01 / BACKUP</span><h3>Two copies. Verified.</h3><p>Read SFlash twice, save both copies to USB, then reopen and verify the saved files with comparison and SHA-256 checksums.</p></article><article class="card"><span class="tag">02 / ACTIVE TIME</span><h3>Recorded operating time.</h3><p>View available console operating time in days, hours, minutes and seconds. Operating time, rather than a game-play counter.</p></article><article class="card"><span class="tag">03 / EMC HISTORY</span><h3>Recorded events.</h3><p>View available historical temperature readings and EMC codes, with an expanded details window. Missing data stays unavailable.</p></article></div></section>
-<section id="start"><div class="wrap"><div class="eyebrow">FROM USB TO VERIFIED</div><h2>Start in four steps.</h2><p>Use an already configured, compatible PS5 homebrew setup with <strong>elfldr</strong> and <strong>ShadowMountPlus</strong>, plus a writable USB drive.</p><ol class="steps"><li><strong>Extract the ZIP.</strong><br>Put <code>MODI-SFlash-Beta-1.ffpkg</code> in the USB <code>homebrew</code> folder used by ShadowMountPlus.</li><li><strong>Open the app.</strong><br>Start your homebrew environment, let ShadowMountPlus mount the application, then open its tile.</li><li><strong>Press X.</strong><br>Keep the USB drive connected while the application reads and verifies both copies.</li><li><strong>Wait for VERIFIED.</strong><br>Find the copies, checksums, manifest and logs under <code>MODI_PS5_SFLASH_RO</code> on the USB drive.</li></ol><p class="note"><strong>The engine is embedded.</strong> No separate ELF or payload-folder copy is needed for this package.</p></div></section>
-<section id="screens"><div class="wrap"><div class="eyebrow">APPLICATION PREVIEW</div><h2>A clear view of your backup.</h2><p>Console Information shows available model, drive, storage and firmware information. Identifiers are masked by default. Options include automatic language selection, manual PL/EN selection and two text styles.</p><div class="gallery"><figure><img loading="lazy" src="assets/results.png" width="1920" height="1080" alt="Backup result screen with sample Active Time and thermal events"><figcaption>PC-rendered preview with sample values, including the 90.5 °C event. Not a live measurement.</figcaption></figure><figure><img loading="lazy" src="assets/console-info.png" width="1920" height="1080" alt="Console Information preview with masked sample identifiers"><figcaption>Console Information — PC preview with sample data.</figcaption></figure><details><summary>Show the backup screen</summary><figure><img loading="lazy" src="assets/backup.png" width="1920" height="1080" alt="MODI SFlash backup screen"><figcaption>Backup screen — PC preview.</figcaption></figure></details></div></div></section>
-<section id="status"><div class="wrap"><div class="eyebrow">BETA 1 / TEST SCOPE</div><h2>What has been verified.</h2><p>The embedded engine is byte-for-byte identical to the engine that completed a verified backup on <strong>one PS5 running 13.60</strong>. Both saved copies were 2 MiB and matched. The final Beta 1 frontend passed PC compilation and rendering checks; this exact frontend has not yet been retested on a console. Other firmware and hardware revisions are not confirmed. PS5 Pro testing is pending.</p><p>Recorded thermal events are not a guarantee of the highest lifetime temperature and do not diagnose a cooling fault on their own. A verified software read is not proof of full physical NOR coverage or a tested chip-programmer recovery procedure.</p><details><summary>Download integrity and notices</summary><p>The ZIP contains only the application, README, component licenses and checksums.</p><p><a href="downloads/SHA256SUMS.txt">SHA-256 checksums</a> · <a href="downloads/README.txt">Plain-text instructions</a> · <a href="downloads/LICENSES.txt">Licenses and notices</a></p><p class="hash">ZIP SHA-256<br>88759f01945060160827d40cc27296f3ea4ce47013f62496504262c37ba56d00</p></details></div></section>
-</main><footer><div class="wrap"><strong>Created by Modyfikator89 / ModyfikatorCasper</strong><p>Thanks to the PS5 homebrew community, all contributors, and <strong>lewy20041</strong> for introducing us to application development.</p><p><a href="../">All MODI projects</a> · <a href="https://github.com/modyfikatorcasper/modyfikatorcasper.github.io/tree/main/modi-sflash">Project on GitHub</a> · <a href="downloads/LICENSES.txt">Licenses</a></p></div></footer>
-</body></html>
+<header><div class="wrap"><div class="bar"><a class="brand" href="../">MODI<small>DIAGNOSTIC LAB</small></a><nav aria-label="Project navigation" data-i18n-aria-label="navLabel">
+<a data-i18n="navDownload" href="#download">Download</a>
+<a data-i18n="navStart" href="#start">Getting started</a>
+<a data-i18n="navScreens" href="#screens">Screens</a>
+<a data-i18n="navTests" href="#status">Tests</a>
+</nav><div class="language" role="group" aria-label="Language" data-i18n-aria-label="langLabel">
+<button type="button" data-lang="pl" aria-pressed="false" lang="pl">PL</button><button type="button" data-lang="en" aria-pressed="true" lang="en">EN</button></div><span class="sr-only" id="language-status" aria-live="polite"></span></div></div></header><main><div class="wrap hero">
+<img class="cover" src="assets/cover.png" width="1600" height="900" alt="MODI SFlash — verified USB backup, Active Time and EMC history" data-i18n-alt="coverAlt">
+<h1>MODI SFlash <span style="color:var(--green)">Beta 1</span></h1>
+<div data-i18n="breakthrough" class="eyebrow">A BREAKTHROUGH IN SIMPLICITY</div>
+<h2 data-i18n="pitch" class="pitch">Your PS5. Your backup. One press.</h2>
+<p data-i18n="intro" class="intro">Press <strong>X</strong> to save two verified SFlash copies to USB. Discover your console’s recorded operating time and available thermal/error history in one easy-to-use, free homebrew app.</p>
+<p data-i18n="backupBefore" >Before trying unfamiliar homebrew or making system changes, keep a verified copy of the SFlash data your console exposes. Preserve a reference for diagnostics and future recovery work.</p>
+<div class="actions" id="download">
+<a data-i18n="download" class="button primary" href="downloads/MODI-SFlash-Beta-1.zip" download>Download Beta 1 · ZIP</a>
+<a data-i18n="how" class="button" href="#start">How to use</a>
+</div>
+<p data-i18n="audience" class="small">For hobbyists and repair diagnostics · Embedded engine · Source flash is read-only</p>
+</div><section><div class="wrap grid"><article class="card"><span class="tag">01 / BACKUP</span>
+<h3 data-i18n="twoTitle" >Two copies. Verified.</h3>
+<p data-i18n="twoBody" >Two independent reads, two USB copies, then comparison and SHA-256 verification after closing and reopening the saved files.</p>
+</article><article class="card"><span class="tag">02 / ACTIVE TIME</span>
+<h3 data-i18n="activeTitle" >Discover recorded operating time.</h3>
+<p data-i18n="activeBody" >Available recorded console operating time, displayed in days, hours, minutes and seconds. This is console operating time, rather than time spent in a particular game or the current session.</p>
+</article><article class="card"><span class="tag">03 / EMC</span>
+<h3 data-i18n="thermalTitle" >Let thermal history guide inspection.</h3>
+<p data-i18n="thermalBody" >View available recorded temperatures and EMC error events. High readings can guide a cooling inspection and help assess whether the thermal interface needs service.</p>
+</article></div></section><section id="start"><div class="wrap">
+<div data-i18n="startTag" class="eyebrow">FROM USB TO VERIFIED</div>
+<h2 data-i18n="startTitle" >Start in four steps.</h2>
+<p data-i18n="requirements" >Use an already configured, compatible PS5 homebrew setup with <strong>elfldr</strong> and <strong>ShadowMountPlus</strong>, plus a writable USB drive.</p>
+<ol class="steps">
+<li data-i18n="step1" ><strong>Extract the ZIP.</strong><br>Put <code>MODI-SFlash-Beta-1.ffpkg</code> in the USB <code>homebrew</code> folder used by ShadowMountPlus.</li>
+<li data-i18n="step2" ><strong>Open the app.</strong><br>Start your homebrew environment, let ShadowMountPlus mount the application, then open its tile.</li>
+<li data-i18n="step3" ><strong>Press X.</strong><br>Keep the USB drive connected while the application reads and verifies both copies.</li>
+<li data-i18n="step4" ><strong>Wait for VERIFIED.</strong><br>The copies, checksums, manifest and logs are saved under <code>MODI_PS5_SFLASH_RO</code> on USB.</li>
+</ol>
+<p data-i18n="embedded" class="note"><strong>The engine is embedded.</strong> No separate ELF or payload-folder copy is needed for this package.</p>
+</div></section><section id="screens"><div class="wrap">
+<div data-i18n="screensTag" class="eyebrow">APPLICATION PREVIEW</div>
+<h2 data-i18n="screensTitle" >Backup, operating time and history.</h2>
+<p data-i18n="consoleBody" >Console Information shows available model, drive, storage and firmware information. Identifiers are masked by default. Options include automatic language selection, manual PL/EN selection and two text styles.</p>
+<div class="gallery"><figure><img loading="lazy" src="assets/results.png" width="1920" height="1080" alt="Backup result preview with sample Active Time and thermal history" data-i18n-alt="resultAlt">
+<figcaption data-i18n="resultCaption" >PC-rendered preview with sample values, including the 90.5 °C event. Not a live measurement.</figcaption>
+</figure><figure><img loading="lazy" src="assets/console-info.png" width="1920" height="1080" alt="Console Information preview with masked sample identifiers" data-i18n-alt="consoleAlt">
+<figcaption data-i18n="consoleCaption" >Console Information — PC preview with sample data.</figcaption>
+</figure><details>
+<summary data-i18n="showBackup" >Show the backup screen</summary>
+<figure><img loading="lazy" src="assets/backup.png" width="1920" height="1080" alt="MODI SFlash backup screen" data-i18n-alt="backupAlt">
+<figcaption data-i18n="backupCaption" >Backup screen — PC preview.</figcaption>
+</figure></details></div></div></section><section id="programmer"><div class="wrap">
+<div data-i18n="futureTag" class="eyebrow">COMING NEXT / IN DEVELOPMENT</div>
+<h2 data-i18n="futureTitle" >A programming tool for the community.</h2>
+<p data-i18n="futureBody" >We plan to release a chip-programming tool for the community. The goal is to make writing a suitable, verified backup directly to a flash chip easier. The tool and recovery workflow are still in development; physical-chip recovery with this app’s backup has not yet been validated.</p>
+</div></section><section id="status"><div class="wrap">
+<div data-i18n="statusTag" class="eyebrow">BETA 1 / TEST COVERAGE</div>
+<h2 data-i18n="statusTitle" >Console tests and pending targets.</h2>
+<p data-i18n="statusIntro" >The MODI team reports verification on the FAT and Slim models below. All reported completed console tests used <strong>firmware 13.60</strong>. Results apply to the combinations listed; pending targets are not compatibility claims.</p>
+<div class="table-wrap"><table><caption class="sr-only" aria-label="Reported console verification" data-i18n-aria-label="hardwareTable"></caption><thead><tr>
+<th data-i18n="familyHead" scope="col">Console</th>
+<th data-i18n="modelHead" scope="col">Model</th>
+<th scope="col">Firmware</th>
+<th data-i18n="statusHead" scope="col">Status</th>
+</tr></thead><tbody>
+<tr><td>FAT</td><td>CFI-1016</td><td>13.60</td>
+<td data-i18n="checked0" class="verified">Verified — reported by MODI</td>
+</tr>
+<tr><td>FAT</td><td>CFI-1116</td><td>13.60</td>
+<td data-i18n="checked1" class="verified">Verified — reported by MODI</td>
+</tr>
+<tr><td>Slim</td><td>CFI-2016</td><td>13.60</td>
+<td data-i18n="checked2" class="verified">Verified — reported by MODI</td>
+</tr>
+<tr><td>Slim</td><td>CFI-2116</td><td>13.60</td>
+<td data-i18n="checked3" class="verified">Verified — reported by MODI</td>
+</tr>
+<tr><td>PS5 Pro</td><td>—</td><td>13.20</td>
+<td data-i18n="proPending" class="pending">Pending</td>
+</tr></tbody></table></div>
+<h3 data-i18n="firmwareTitle" >Additional firmware testing</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Firmware</th>
+<th data-i18n="fwStatusHead" scope="col">Status</th>
+</tr></thead><tbody>
+<tr><td>13.12</td>
+<td data-i18n="fwPending0" class="pending">Pending</td>
+</tr>
+<tr><td>13.20</td>
+<td data-i18n="fwPending1" class="pending">Pending</td>
+</tr>
+<tr><td>13.40</td>
+<td data-i18n="fwPending2" class="pending">Pending</td>
+</tr>
+</tbody></table></div>
+<p data-i18n="verificationDetails" >The embedded engine is byte-for-byte identical to the engine independently checked against a completed 13.60 backup: both saved copies were 2 MiB and matched. The final Beta 1 frontend passed PC compilation and rendering checks; this exact frontend has not yet been retested on a console.</p>
+<p data-i18n="limits" >The app backs up the SFlash image exposed by the console. SSD contents, game saves and optical-drive pairing recovery are outside the verified backup scope. Recorded thermal events are not a guarantee of the highest lifetime temperature and do not diagnose a cooling fault on their own.</p>
+<details>
+<summary data-i18n="integrityTitle" >Download integrity and notices</summary>
+<p data-i18n="archiveBody" >The ZIP contains only the application, README, component licenses and checksums.</p>
+<p>
+<a data-i18n="checksumLink" href="downloads/SHA256SUMS.txt">SHA-256 checksums</a>
+ · 
+<a data-i18n="instructionsLink" href="downloads/README.txt">Package instructions (English)</a>
+ · 
+<a data-i18n="licensesLink" href="downloads/LICENSES.txt">Licenses and notices</a>
+</p><p class="hash">ZIP SHA-256<br>88759f01945060160827d40cc27296f3ea4ce47013f62496504262c37ba56d00</p></details></div></section></main><footer><div class="wrap">
+<strong data-i18n="author" >Created by Modyfikator89 / ModyfikatorCasper</strong>
+<p data-i18n="thanks" >Thanks to the PS5 homebrew community, all contributors, and <strong>lewy20041</strong> for introducing us to application development.</p>
+<p>
+<a data-i18n="allProjects" href="../">All MODI projects</a>
+ · 
+<a data-i18n="githubLink" href="https://github.com/modyfikatorcasper/modyfikatorcasper.github.io/tree/main/modi-sflash">Project on GitHub</a>
+</p></div></footer>
+<script>(() => {
+  const translations = {"navLabel": {"en": "Project navigation", "pl": "Nawigacja projektu"}, "navDownload": {"en": "Download", "pl": "Pobierz"}, "navStart": {"en": "Getting started", "pl": "Uruchomienie"}, "navScreens": {"en": "Screens", "pl": "Wygląd"}, "navTests": {"en": "Tests", "pl": "Testy"}, "langLabel": {"en": "Language", "pl": "Język"}, "coverAlt": {"en": "MODI SFlash — verified USB backup, Active Time and EMC history", "pl": "MODI SFlash — zweryfikowany backup USB, Active Time i historia EMC"}, "breakthrough": {"en": "A BREAKTHROUGH IN SIMPLICITY", "pl": "PRZEŁOM W PROSTOCIE OBSŁUGI"}, "pitch": {"en": "Your PS5. Your backup. One press.", "pl": "Twoja PS5. Twoja kopia. Jeden przycisk."}, "intro": {"en": "Press <strong>X</strong> to save two verified SFlash copies to USB. Discover your console’s recorded operating time and available thermal/error history in one easy-to-use, free homebrew app.", "pl": "Naciśnij <strong>X</strong>, aby zapisać dwie zweryfikowane kopie SFlash na USB. Poznaj zapisany czas pracy konsoli oraz dostępne zdarzenia termiczne i błędy — w jednej prostej, darmowej aplikacji homebrew."}, "backupBefore": {"en": "Before trying unfamiliar homebrew or making system changes, keep a verified copy of the SFlash data your console exposes. Preserve a reference for diagnostics and future recovery work.", "pl": "Zanim przetestujesz nieznane homebrew lub zmienisz coś w systemie, zachowaj zweryfikowaną kopię danych SFlash udostępnianych przez konsolę. To punkt odniesienia do diagnostyki i przyszłych prac nad odzyskiwaniem."}, "download": {"en": "Download Beta 1 · ZIP", "pl": "Pobierz Beta 1 · ZIP"}, "how": {"en": "How to use", "pl": "Jak korzystać"}, "audience": {"en": "For hobbyists and repair diagnostics · Embedded engine · Source flash is read-only", "pl": "Dla hobbystów i serwisów · Wbudowany silnik · Pamięć źródłowa tylko do odczytu"}, "twoTitle": {"en": "Two copies. Verified.", "pl": "Dwie kopie. Zweryfikowane."}, "twoBody": {"en": "Two independent reads, two USB copies, then comparison and SHA-256 verification after closing and reopening the saved files.", "pl": "Dwa niezależne odczyty, dwie kopie na USB, a następnie porównanie i weryfikacja SHA-256 po zamknięciu i ponownym otwarciu zapisanych plików."}, "activeTitle": {"en": "Discover recorded operating time.", "pl": "Poznaj zapisany czas pracy."}, "activeBody": {"en": "Available recorded console operating time, displayed in days, hours, minutes and seconds. This is console operating time, rather than time spent in a particular game or the current session.", "pl": "Dostępny zapisany czas pracy konsoli w dniach, godzinach, minutach i sekundach. To czas pracy konsoli, a nie czas konkretnej gry ani bieżącej sesji."}, "thermalTitle": {"en": "Let thermal history guide inspection.", "pl": "Sprawdź historię termiczną."}, "thermalBody": {"en": "View available recorded temperatures and EMC error events. High readings can guide a cooling inspection and help assess whether the thermal interface needs service.", "pl": "Zobacz dostępne zapisane temperatury i zdarzenia błędów EMC. Wysokie odczyty mogą wskazać potrzebę kontroli chłodzenia i oceny, czy materiał termoprzewodzący wymaga serwisu."}, "startTag": {"en": "FROM USB TO VERIFIED", "pl": "OD USB DO VERIFIED"}, "startTitle": {"en": "Start in four steps.", "pl": "Uruchom w czterech krokach."}, "requirements": {"en": "Use an already configured, compatible PS5 homebrew setup with <strong>elfldr</strong> and <strong>ShadowMountPlus</strong>, plus a writable USB drive.", "pl": "Przygotuj działające, zgodne środowisko homebrew PS5 z <strong>elfldr</strong> i <strong>ShadowMountPlus</strong> oraz pendrive z możliwością zapisu."}, "step1": {"en": "<strong>Extract the ZIP.</strong><br>Put <code>MODI-SFlash-Beta-1.ffpkg</code> in the USB <code>homebrew</code> folder used by ShadowMountPlus.", "pl": "<strong>Rozpakuj ZIP.</strong><br>Umieść <code>MODI-SFlash-Beta-1.ffpkg</code> w folderze <code>homebrew</code> na USB używanym przez ShadowMountPlus."}, "step2": {"en": "<strong>Open the app.</strong><br>Start your homebrew environment, let ShadowMountPlus mount the application, then open its tile.", "pl": "<strong>Uruchom aplikację.</strong><br>Włącz środowisko homebrew, poczekaj na zamontowanie aplikacji przez ShadowMountPlus i otwórz jej kafelek."}, "step3": {"en": "<strong>Press X.</strong><br>Keep the USB drive connected while the application reads and verifies both copies.", "pl": "<strong>Naciśnij X.</strong><br>Pozostaw pendrive podłączony podczas odczytu i weryfikacji obu kopii."}, "step4": {"en": "<strong>Wait for VERIFIED.</strong><br>The copies, checksums, manifest and logs are saved under <code>MODI_PS5_SFLASH_RO</code> on USB.", "pl": "<strong>Poczekaj na VERIFIED.</strong><br>Kopie, sumy kontrolne, manifest i logi znajdziesz w <code>MODI_PS5_SFLASH_RO</code> na USB."}, "embedded": {"en": "<strong>The engine is embedded.</strong> No separate ELF or payload-folder copy is needed for this package.", "pl": "<strong>Silnik jest wbudowany.</strong> Ta paczka nie wymaga osobnego pliku ELF ani kopiowania czegokolwiek do folderu payload."}, "screensTag": {"en": "APPLICATION PREVIEW", "pl": "PODGLĄD APLIKACJI"}, "screensTitle": {"en": "Backup, operating time and history.", "pl": "Backup, czas pracy i historia."}, "consoleBody": {"en": "Console Information shows available model, drive, storage and firmware information. Identifiers are masked by default. Options include automatic language selection, manual PL/EN selection and two text styles.", "pl": "Informacje o konsoli pokazują dostępne dane modelu, napędu, pamięci masowej i firmware. Identyfikatory są domyślnie ukryte. Opcje obejmują automatyczny wybór języka, ręczne PL/EN oraz dwa style czcionki."}, "resultAlt": {"en": "Backup result preview with sample Active Time and thermal history", "pl": "Podgląd wyników backupu z przykładowym Active Time i historią temperatur"}, "resultCaption": {"en": "PC-rendered preview with sample values, including the 90.5 °C event. Not a live measurement.", "pl": "Podgląd z komputera z danymi przykładowymi, w tym zdarzeniem 90,5 °C. To nie jest pomiar na żywo."}, "consoleAlt": {"en": "Console Information preview with masked sample identifiers", "pl": "Podgląd informacji o konsoli z ukrytymi przykładowymi identyfikatorami"}, "consoleCaption": {"en": "Console Information — PC preview with sample data.", "pl": "Informacje o konsoli — podgląd z komputera z danymi przykładowymi."}, "showBackup": {"en": "Show the backup screen", "pl": "Pokaż ekran backupu"}, "backupAlt": {"en": "MODI SFlash backup screen", "pl": "Ekran backupu MODI SFlash"}, "backupCaption": {"en": "Backup screen — PC preview.", "pl": "Ekran backupu — podgląd z komputera."}, "futureTag": {"en": "COMING NEXT / IN DEVELOPMENT", "pl": "KOLEJNY KROK / W ROZWOJU"}, "futureTitle": {"en": "A programming tool for the community.", "pl": "Programator dla społeczności."}, "futureBody": {"en": "We plan to release a chip-programming tool for the community. The goal is to make writing a suitable, verified backup directly to a flash chip easier. The tool and recovery workflow are still in development; physical-chip recovery with this app’s backup has not yet been validated.", "pl": "Planujemy publicznie udostępnić narzędzie do programowania kości flash. Chcemy uprościć zapis odpowiedniej, zweryfikowanej kopii bezpośrednio do kości. Narzędzie i procedura odzyskiwania są w rozwoju; odtworzenie fizycznej kości z kopii tej aplikacji nie zostało jeszcze potwierdzone."}, "statusTag": {"en": "BETA 1 / TEST COVERAGE", "pl": "BETA 1 / ZAKRES TESTÓW"}, "statusTitle": {"en": "Console tests and pending targets.", "pl": "Testy konsol i oczekujące warianty."}, "statusIntro": {"en": "The MODI team reports verification on the FAT and Slim models below. All reported completed console tests used <strong>firmware 13.60</strong>. Results apply to the combinations listed; pending targets are not compatibility claims.", "pl": "Zespół MODI potwierdza weryfikację na poniższych modelach FAT i Slim. Wszystkie zgłoszone zakończone testy konsol wykonano na <strong>firmware 13.60</strong>. Wyniki dotyczą wymienionych kombinacji; pozycje Pending nie oznaczają potwierdzonej zgodności."}, "hardwareTable": {"en": "Reported console verification", "pl": "Zgłoszona weryfikacja konsol"}, "familyHead": {"en": "Console", "pl": "Konsola"}, "modelHead": {"en": "Model", "pl": "Model"}, "statusHead": {"en": "Status", "pl": "Status"}, "checked0": {"en": "Verified — reported by MODI", "pl": "Zweryfikowano — potwierdzenie MODI"}, "checked1": {"en": "Verified — reported by MODI", "pl": "Zweryfikowano — potwierdzenie MODI"}, "checked2": {"en": "Verified — reported by MODI", "pl": "Zweryfikowano — potwierdzenie MODI"}, "checked3": {"en": "Verified — reported by MODI", "pl": "Zweryfikowano — potwierdzenie MODI"}, "proPending": {"en": "Pending", "pl": "Oczekuje (Pending)"}, "firmwareTitle": {"en": "Additional firmware testing", "pl": "Kolejne testy firmware"}, "fwStatusHead": {"en": "Status", "pl": "Status"}, "fwPending0": {"en": "Pending", "pl": "Oczekuje (Pending)"}, "fwPending1": {"en": "Pending", "pl": "Oczekuje (Pending)"}, "fwPending2": {"en": "Pending", "pl": "Oczekuje (Pending)"}, "verificationDetails": {"en": "The embedded engine is byte-for-byte identical to the engine independently checked against a completed 13.60 backup: both saved copies were 2 MiB and matched. The final Beta 1 frontend passed PC compilation and rendering checks; this exact frontend has not yet been retested on a console.", "pl": "Wbudowany silnik jest identyczny bajtowo z silnikiem sprawdzonym na podstawie zakończonego backupu z 13.60: obie zapisane kopie miały po 2 MiB i były zgodne. Końcowy frontend Beta 1 przeszedł kompilację i testy wyświetlania na PC; dokładnie ten frontend nie ma jeszcze ponownego potwierdzenia na konsoli."}, "limits": {"en": "The app backs up the SFlash image exposed by the console. SSD contents, game saves and optical-drive pairing recovery are outside the verified backup scope. Recorded thermal events are not a guarantee of the highest lifetime temperature and do not diagnose a cooling fault on their own.", "pl": "Aplikacja kopiuje obraz SFlash udostępniany przez konsolę. Zawartość SSD, zapisy gier i odzyskiwanie parowania napędu nie należą do zweryfikowanego zakresu kopii. Zapisane zdarzenia termiczne nie gwarantują odczytu najwyższej temperatury z całego życia konsoli i same nie rozstrzygają o usterce chłodzenia."}, "integrityTitle": {"en": "Download integrity and notices", "pl": "Sumy kontrolne i licencje"}, "archiveBody": {"en": "The ZIP contains only the application, README, component licenses and checksums.", "pl": "ZIP zawiera tylko aplikację, instrukcję, licencje komponentów i sumy kontrolne."}, "checksumLink": {"en": "SHA-256 checksums", "pl": "Sumy kontrolne SHA-256"}, "instructionsLink": {"en": "Package instructions (English)", "pl": "Instrukcja paczki (angielski)"}, "licensesLink": {"en": "Licenses and notices", "pl": "Licencje i noty"}, "author": {"en": "Created by Modyfikator89 / ModyfikatorCasper", "pl": "Autorzy: Modyfikator89 / ModyfikatorCasper"}, "thanks": {"en": "Thanks to the PS5 homebrew community, all contributors, and <strong>lewy20041</strong> for introducing us to application development.", "pl": "Dziękujemy scenie homebrew PS5, wszystkim współtwórcom oraz <strong>lewy20041</strong> za wprowadzenie w tworzenie aplikacji."}, "allProjects": {"en": "All MODI projects", "pl": "Wszystkie projekty MODI"}, "githubLink": {"en": "Project on GitHub", "pl": "Projekt na GitHubie"}};
+  const metadata = {"en": {"title": "MODI SFlash Beta 1 — PS5 backup made simple", "description": "A breakthrough in simplicity: two verified SFlash copies on USB, recorded Active Time and thermal history in one free PS5 homebrew app.", "announcement": "English selected"}, "pl": {"title": "MODI SFlash Beta 1 — prosty backup PS5", "description": "Przełom w prostocie obsługi: dwie zweryfikowane kopie SFlash na USB, zapisany Active Time i historia termiczna w jednej darmowej aplikacji homebrew PS5.", "announcement": "Wybrano język polski"}};
+  function setLanguage(code) {
+    const lang = code === 'pl' ? 'pl' : 'en';
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const entry = translations[el.dataset.i18n];
+      if (entry) el.innerHTML = entry[lang];
+    });
+    for (const attribute of ['alt', 'aria-label']) {
+      document.querySelectorAll('[data-i18n-' + attribute + ']').forEach(el => {
+        const entry = translations[el.getAttribute('data-i18n-' + attribute)];
+        if (entry) el.setAttribute(attribute, entry[lang]);
+      });
+    }
+    document.querySelectorAll('button[data-lang]').forEach(el => {
+      el.setAttribute('aria-pressed', String(el.dataset.lang === lang));
+    });
+    document.title = metadata[lang].title;
+    document.querySelector('meta[name="description"]').setAttribute('content', metadata[lang].description);
+    document.querySelector('meta[property="og:title"]').setAttribute('content', metadata[lang].title);
+    document.querySelector('meta[property="og:description"]').setAttribute('content', metadata[lang].description);
+    document.getElementById('language-status').textContent = metadata[lang].announcement;
+    try { localStorage.setItem('modi-sflash-language', lang); } catch {}
+    try { const url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url); } catch {}
+  }
+  document.querySelectorAll('button[data-lang]').forEach(el => el.addEventListener('click', () => setLanguage(el.dataset.lang)));
+  let stored;
+  try { stored = localStorage.getItem('modi-sflash-language'); } catch {}
+  const requested = new URL(location.href).searchParams.get('lang');
+  const initial = requested === 'pl' || requested === 'en' ? requested : stored;
+  setLanguage(initial);
+})();</script></body></html>
