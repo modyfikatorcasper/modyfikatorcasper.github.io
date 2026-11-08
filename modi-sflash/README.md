@@ -2,19 +2,21 @@
 
 ![MODI SFlash](assets/cover.png)
 
-**A breakthrough in simplicity. Your PS5. Your backup. One press.**
+**A breakthrough in simplicity. Back up your PS5 SFlash before you mess with it.**
 
-Press **X** to save two verified SFlash copies to USB. Discover recorded console operating time and available thermal/error history in one easy-to-use, free homebrew app for hobbyists and repair diagnostics. Before experimenting with unfamiliar homebrew or system changes, preserve a verified SFlash reference for diagnostics and future recovery work.
+Got a jailbroken PS5? Press **X** to save two verified SFlash copies to USB. Then check how long your console has actually been active and see its available temperature and EMC error history. MODI SFlash is free homebrew.
 
 **Language: [English](https://modyfikatorcasper.github.io/modi-sflash/?lang=en) · [Polski](https://modyfikatorcasper.github.io/modi-sflash/?lang=pl)**
 
-**[Download Beta 1](downloads/MODI-SFlash-Beta-1.zip)** · **[Project page](https://modyfikatorcasper.github.io/modi-sflash/)** · [Checksums](downloads/SHA256SUMS.txt)
+**[Download Beta 1](downloads/MODI-SFlash-Beta-1.zip)** · **[Project page](https://modyfikatorcasper.github.io/modi-sflash/)** · [Checksums](downloads/SHA256SUMS.txt) · [Licenses and notices](downloads/LICENSES.txt)
 
 ## Start in four steps
 
-1. Extract the ZIP and put `MODI-SFlash-Beta-1.ffpkg` in the USB `homebrew` folder used by your ShadowMountPlus setup.
-2. Start your already configured PS5 homebrew environment with **elfldr**, let **ShadowMountPlus** mount the application, and open its tile.
-3. Keep the USB drive connected and press **X**.
+Getting started with Relapse on **FW 13.60**.
+
+1. Extract the ZIP, copy `MODI-SFlash-Beta-1.ffpkg` to the USB `homebrew` folder, and connect the writable USB drive to the PS5.
+2. Run [Relapse](https://github.com/ntfargo/Relapse-Exploit) and wait for [elfldr](https://github.com/ps5-payload-dev/elfldr) on port **9021**. Load [kstuff-lite](https://github.com/EchoStretch/kstuff-lite) for your firmware, then [ShadowMountPlus](https://github.com/drakmor/ShadowMountPlus). If your host loads them automatically, wait for the app tile.
+3. Open the **MODI SFlash** tile and press **X**. Keep the USB drive connected during the backup.
 4. Wait for **VERIFIED** before removing the USB drive. Find the two copies, SHA-256 checksums, manifest and logs under `MODI_PS5_SFLASH_RO` on USB.
 
 The engine is embedded in the application. **No separate ELF or payload-folder copy is needed.**
@@ -61,6 +63,6 @@ The app copies the SFlash image exposed by the console. SSD contents, game saves
 
 Created by **Modyfikator89 / ModyfikatorCasper**.
 
-Thanks to the **PS5 homebrew community**, all contributors, and **lewy20041** for introducing us to application development.
+Thank you to the entire **PS5 homebrew community**, the developers and contributors behind Relapse, elfldr, kstuff-lite and ShadowMountPlus, and everyone who tested and shared feedback. Special thanks to **lewy20041** for getting us started with app development.
 
 The application is free to download. Redistribution terms and required component notices are in [LICENSES.txt](downloads/LICENSES.txt). The download contains the application, instructions, licenses and checksums; it contains no private console data or application source.
