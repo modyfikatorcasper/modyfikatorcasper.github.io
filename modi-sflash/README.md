@@ -10,6 +10,18 @@ Got a jailbroken PS5? Press **X** to save two verified SFlash copies to USB. The
 
 **[Download Beta 1](downloads/MODI-SFlash-Beta-1.zip)** · **[Project page](https://modyfikatorcasper.github.io/modi-sflash/)** · [Checksums](downloads/SHA256SUMS.txt) · [Licenses and notices](downloads/LICENSES.txt)
 
+## Community firmware test — Beta 2 / Firmware Test 1
+
+**[Download Firmware Test 1](downloads/firmware-test-1/MODI-SFlash-Beta-2-Firmware-Test-1.zip)** · [Instructions — PL/EN](downloads/firmware-test-1/README.txt) · [Checksums](downloads/firmware-test-1/SHA256SUMS.txt) · [Test licenses](downloads/firmware-test-1/LICENSES.txt)
+
+For another firmware or a Beta 1 engine-start error, use the separate **MODI13765** test app. The readiness test starts automatically and can be repeated with Square on Backup, or **Options → Test + USB report → X**. The test does not read flash or kernel memory. The engine and test are embedded; no separate payload copy is needed.
+
+This new build passed PC compilation and automated checks; **console compatibility remains to be tested**. A recognized profile is not a verified backup. Other recognized pre-14.00 backup profiles need explicit Test backup opt-in. Firmware 14.x and unknown versions remain diagnostic-only. Use an already working jailbreak, elfldr on local port 9021 and native-app mount setup compatible with your firmware.
+
+**[Report your result](https://github.com/modyfikatorcasper/modyfikatorcasper.github.io/issues/new?template=modi-sflash-firmware-test.yml)** with the latest `support_fwtest1_*.log` from `USB:/MODI_PS5_SFLASH_RO/diagnostics/`, firmware, console model, loader/jailbreak/mounter versions and what happened. Successful tests are useful too. Review the log before sharing; do not publish flash backups, keys or full console identifiers. There is no automatic upload.
+
+**PL:** Wersja testowa uruchamia test gotowości i zapisuje raport na USB. Prześlij najnowszy log z powyższego folderu wraz z firmware, modelem i wersjami używanych narzędzi. Nie udostępniaj dumpów ani kluczy. Pełna instrukcja PL/EN jest w paczce. Dotychczasowa Beta 1 pozostaje osobno.
+
 ## Start in four steps
 
 Getting started with Relapse on **FW 13.60**.
@@ -66,3 +78,4 @@ Created by **Modyfikator89 / ModyfikatorCasper**.
 Thank you to the entire **PS5 homebrew community**, the developers and contributors behind Relapse, elfldr, kstuff-lite and ShadowMountPlus, and everyone who tested and shared feedback. Special thanks to **lewy20041** for getting us started with app development.
 
 The application is free to download. Redistribution terms and required component notices are in [LICENSES.txt](downloads/LICENSES.txt). The download contains the application, instructions, licenses and checksums; it contains no private console data or application source.
+

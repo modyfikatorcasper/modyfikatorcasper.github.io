@@ -1,0 +1,45 @@
+name: MODI SFlash Firmware Test result
+description: Share a successful or failed Firmware Test 1 result.
+title: "[SFlash Firmware Test 1] FW / console model / result"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For MODI SFlash Beta 2 — Firmware Test 1 (MODI13765).
+        Review your log before posting. Do not upload flash dumps, keys, or full console identifiers.
+        PL: Przejrzyj log przed wysłaniem. Nie publikuj dumpów, kluczy ani pełnych identyfikatorów.
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware / Wersja systemu
+      description: Actual console firmware, not the static version text in an old Beta 1 log.
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Console model / Model konsoli
+      placeholder: CFI model only, no serial number
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Jailbreak, elfldr and mounting setup
+      description: Names, versions and forks, if known. Nazwy i wersje narzędzi.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Steps and result / Kroki i wynik
+      description: Automatic test, manual test or backup? Include success or the exact error.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Support log / Log diagnostyczny
+      description: Attach the newest support_fwtest1_*.log from MODI_PS5_SFLASH_RO/diagnostics on USB. If UI never starts, attach a system error report or screenshot instead.
+    validations:
+      required: true
