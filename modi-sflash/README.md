@@ -2,7 +2,7 @@
 
 [Standalone project repository](https://github.com/modyfikatorcasper/modi-sflash)
 
-![MODI SFlash — NORBIOS and PS5 NOR backup to USB](assets/cover-norbios.jpg)
+![MODI SFlash — NOR / BIOS and PS5 NOR backup to USB](assets/cover-nor-bios.jpg)
 
 **A breakthrough in simplicity. Back up your PS5 SFlash before you mess with it.**
 
