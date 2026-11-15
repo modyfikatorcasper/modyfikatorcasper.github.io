@@ -1,17 +1,299 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="MODI Diagnostic Lab — console and controller diagnostics, maps, tools and research."><title>MODI Diagnostic Lab — wszystkie projekty / all projects</title><link rel="canonical" href="https://modyfikatorcasper.github.io/">
-<style>
-:root{color-scheme:dark;--bg:#090d0b;--panel:#111812;--line:#2d392c;--green:#bdff47;--muted:#a6b2a0}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:var(--bg);color:#edf3e8;font:16px/1.6 system-ui,sans-serif}a{color:var(--green);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible,button:focus-visible{outline:3px solid var(--green);outline-offset:4px}.wrap{max-width:1160px;margin:auto;padding:0 24px}header{position:sticky;top:0;z-index:5;background:#090d0bf5;border-bottom:1px solid var(--line)}.bar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding-top:15px;padding-bottom:15px}.brand{font-weight:850;color:white;letter-spacing:.05em}.brand small{display:block;font-size:10px;color:var(--muted)}nav{display:flex;flex-wrap:wrap;gap:16px}.lang{display:flex;gap:5px}button{background:var(--panel);border:1px solid var(--line);color:white;padding:10px 12px;font-weight:700;cursor:pointer}button[aria-pressed=true]{background:var(--green);color:#111}.hero{padding:76px 24px 54px}.eyebrow,.status{font:700 11px/1.5 ui-monospace,monospace;letter-spacing:.1em;color:var(--green)}h1{font-size:clamp(38px,6vw,68px);line-height:1.05;max-width:800px;letter-spacing:-.035em;margin:16px 0 24px}h2{font-size:30px;line-height:1.2;margin:8px 0 18px}h3{font-size:21px;line-height:1.3;margin:14px 0}p{color:var(--muted)}.hero p{max-width:770px;font-size:19px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.button{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid var(--line);background:#0c110d;font-size:12px;font-weight:750;letter-spacing:.02em}.primary{background:var(--green);color:#10160a;border-color:var(--green)}section{padding:45px 0;border-top:1px solid var(--line)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{border:1px solid var(--line);background:var(--panel);padding:26px;min-width:0;border-radius:10px}.card p{margin:12px 0}.notice{padding:18px 22px;border-left:3px solid var(--green);background:#111812;margin:24px 0}.links{display:flex;gap:12px;flex-wrap:wrap}.soon{color:#d6b367}.footer{padding:28px 0;font-size:12px;color:var(--muted)}.footer p{margin:8px 0}@media(max-width:760px){.bar{flex-wrap:wrap;gap:12px}nav{order:3;width:100%;font-size:13px}.hero{padding:48px 18px}.grid{grid-template-columns:1fr}.wrap{padding:0 18px}.card{padding:22px}html{scroll-padding-top:145px}}
-</style></head><body>
-<header><div class="wrap bar"><a class="brand" href="#top">MODI<small>DIAGNOSTIC LAB</small></a><nav aria-label="Project sections"><a href="#maps">Maps</a><a href="#tools">Tools</a><a href="/modi-sflash/">PS5 NOR Backup</a><a href="#controllers">Controllers</a><a href="#modifications">Modifications</a><a href="#research">Research</a></nav><div class="lang" aria-label="Language"><button id="pl" aria-pressed="true">PL</button><button id="en" aria-pressed="false">EN</button></div></div></header>
-<main id="top"><div class="hero wrap"><div class="eyebrow">MODI DIAGNOSTIC LAB · MODYFIKATOR89</div><h1 data-en="All MODI projects.<br>One place to start." data-pl="Wszystkie projekty MODI.<br>W jednym miejscu.">Wszystkie projekty MODI.<br>W jednym miejscu.</h1><p data-en="Console and controller maps, service tools and research. Open an existing project or check the status of the next one. Each project keeps its own documentation, versions and test results." data-pl="Mapy konsol i kontrolerów, narzędzia serwisowe i badania. Otwórz dostępny projekt albo sprawdź status kolejnego. Każdy projekt zachowuje własną dokumentację, wersje i wyniki testów.">Mapy konsol i kontrolerów, narzędzia serwisowe i badania. Otwórz dostępny projekt albo sprawdź status kolejnego. Każdy projekt zachowuje własną dokumentację, wersje i wyniki testów.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/">X360 ULTIMATE / FLASHSHIP</a><a class="button" href="https://modyfikatorcasper.github.io/modi-jb-checker/">JB CHECKER</a><a class="button" href="https://modyfikatorcasper.github.io/modi-maps-dualsense-edge-x07-review/">DUALSENSE EDGE MAPS</a><a class="button" href="https://modyfikatorcasper.github.io/modi-ps3-flash/">PS3 FLASH</a><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/maps" data-en="CONSOLE MAPS" data-pl="MAPY KONSOL">MAPY KONSOL</a><a class="button" href="https://github.com/modyfikatorcasper">GitHub</a></div></div>
-<section id="tools"><div class="wrap"><div class="eyebrow">TOOLS</div><h2 data-en="Service tools" data-pl="Narzędzia serwisowe">Narzędzia serwisowe</h2><div class="grid"><article class="card"><span class="status">BETA 1 · PS5 HOMEBREW</span><h3>MODI SFlash — PS5 NOR Backup</h3><p data-en="PS5 NOR dumper for jailbroken consoles. Save two verified NOR dumps to USB and view available Active Time and EMC thermal and error history." data-pl="PS5 NOR Dumper dla konsol z jailbreakiem. Zapisz dwie zweryfikowane kopie NOR na USB i sprawdź dostępny czas pracy oraz historię temperatur i błędów EMC.">PS5 NOR Dumper dla konsol z jailbreakiem. Zapisz dwie zweryfikowane kopie NOR na USB i sprawdź dostępny czas pracy oraz historię temperatur i błędów EMC.</p><div class="actions"><a class="button primary" href="/modi-sflash/" data-en="OPEN PROJECT / DOWNLOAD" data-pl="OTWÓRZ PROJEKT / POBIERZ">OTWÓRZ PROJEKT / POBIERZ</a><a class="button" href="https://github.com/modyfikatorcasper/modi-sflash">GitHub</a></div></article><article class="card"><span class="status">STABLE TURBO · ALPHA ULTIMATE</span><h3>MODI X360 ULTIMATE / FLASHSHIP</h3><p data-en="RP2350 service hardware and the target Xbox 360 system. TURBO NAND/eMMC is tested; additional Alpha functions need hardware validation." data-pl="Sprzęt serwisowy RP2350 i docelowy system Xbox 360. TURBO NAND/eMMC jest przetestowany; dodatkowe funkcje Alpha wymagają walidacji sprzętowej.">RP2350 service hardware and the target Xbox 360 system. TURBO NAND/eMMC is tested; additional Alpha functions need hardware validation.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/" data-en="OPEN PROJECT" data-pl="OTWÓRZ PROJEKT">OPEN PROJECT</a><a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo">GitHub</a></div></article><article class="card"><span class="status">PUBLISHED</span><h3>MODI JB CHECKER</h3><p data-en="PS5 serial and factory firmware database. Records and estimates are distinguished in the project." data-pl="Baza numerów seryjnych i fabrycznego firmware PS5. Projekt rozróżnia rekordy i szacunki.">PS5 serial and factory firmware database. Records and estimates are distinguished in the project.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-jb-checker/" data-en="OPEN PROJECT" data-pl="OTWÓRZ PROJEKT">OPEN PROJECT</a><a class="button" href="https://github.com/modyfikatorcasper/modi-jb-checker">GitHub</a></div></article></div><p class="notice" data-en="FLASHSHIP = RP2350 hardware. X360 ULTIMATE = the target system and software. TURBO = fast NAND/eMMC module. ONE DEVICE. ONE HEADER. ONE SOFTWARE." data-pl="FLASHSHIP = sprzęt RP2350. X360 ULTIMATE = docelowy system i oprogramowanie. TURBO = szybki moduł NAND/eMMC. ONE DEVICE. ONE HEADER. ONE SOFTWARE.">FLASHSHIP = sprzęt RP2350. X360 ULTIMATE = docelowy system i oprogramowanie. TURBO = szybki moduł NAND/eMMC. ONE DEVICE. ONE HEADER. ONE SOFTWARE.</p></div></section>
-<section id="maps"><div class="wrap"><div class="eyebrow">MAPS</div><h2 data-en="Console maps and measurement points" data-pl="Mapy konsol i punkty pomiarowe">Mapy konsol i punkty pomiarowe</h2><div class="grid"><article class="card"><span class="status">IN DEVELOPMENT</span><h3>Xbox 360 Console Maps · Trinity / Jasper V1</h3><p data-en="One diagnostic module with board selection, error codes, PCB views and power/boot paths. Live in-development preview: some Jasper locations are UNVERIFIED, so a marked area is not always a confirmed component position." data-pl="Jeden moduł z wyborem płyty, kodami błędów, widokami PCB i ścieżką zasilania/startu. Podgląd IN DEVELOPMENT: część pozycji Jaspera ma status UNVERIFIED, więc zaznaczony obszar nie zawsze potwierdza dokładną pozycję elementu.">Jeden moduł z wyborem płyty, kodami błędów, widokami PCB i ścieżką zasilania/startu. Wersja do oceny: część pozycji Jaspera ma status UNVERIFIED. Link do aplikacji zadziała po zatwierdzeniu i scaleniu PR modułu.</p><div class="links"><a class="button primary" href="https://modyfikatorcasper.github.io/Xbox-360-Diagnostic-Maps-/maps/xbox/xbox-360/console-maps/dist/" data-en="OPEN MODULE" data-pl="OTWÓRZ MODUŁ">OTWÓRZ MODUŁ</a><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/pull/3" data-en="REVIEW PR" data-pl="ZOBACZ PR">ZOBACZ PR</a></div></article><article class="card" id="southbridge"><span class="status soon" data-pl="W TRAKCIE PRAC · PANEL WKRÓTCE" data-en="IN DEVELOPMENT · PANEL COMING SOON">W TRAKCIE PRAC · PANEL WKRÓTCE</span><h3 data-pl="MODI Maps · Mapy Southbridge PS5" data-en="MODI Maps · PS5 Southbridge Maps">MODI Maps · Mapy Southbridge PS5</h3><p data-pl="Według naszych ustaleń dwie wersje mostka mają identyczny układ kulek BGA i pinout; różnią się obsługą HDMI i selektorem w NVS. Istnieje Swapper do wymiany mostka. Pracujemy nad dokumentacją; wkrótce planujemy panel z pełną obsługą Southbridge oraz innych elementów płyt w różnych rewizjach." data-en="According to our findings, the two Southbridge variants share the same BGA ball layout and pinout; they differ in HDMI support and the selector in NVS. A Swapper for Southbridge replacement exists. Documentation is in progress; we plan to add a panel soon with full support for Southbridge and other motherboard components across different board revisions.">Według naszych ustaleń dwie wersje mostka mają identyczny układ kulek BGA i pinout; różnią się obsługą HDMI i selektorem w NVS. Istnieje Swapper do wymiany mostka. Pracujemy nad dokumentacją; wkrótce planujemy panel z pełną obsługą Southbridge oraz innych elementów płyt w różnych rewizjach.</p><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/maps/playstation/ps5/southbridge" data-pl="OPIS PROJEKTU · PL / EN" data-en="PROJECT DETAILS · PL / EN">OPIS PROJEKTU · PL / EN</a></article><article class="card"><span class="status soon">COMING SOON</span><h3>PlayStation · Xbox One / Series · Nintendo</h3><p data-en="Planned console-map branches. Materials are published after preparation and verification." data-pl="Planowane gałęzie map konsol. Materiały publikujemy po przygotowaniu i weryfikacji.">Planowane gałęzie map konsol. Materiały publikujemy po przygotowaniu i weryfikacji.</p><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/maps" data-en="PROJECT STRUCTURE" data-pl="STRUKTURA PROJEKTU">PROJECT STRUCTURE</a></article></div></div></section>
-<section id="controllers"><div class="wrap"><div class="eyebrow">CONTROLLERS</div><h2 data-en="Controller documentation" data-pl="Dokumentacja kontrolerów">Dokumentacja kontrolerów</h2><div class="grid"><article class="card"><span class="status">PUBLISHED</span><h3>MODI Maps · DualSense Edge X07</h3><p data-en="Interactive PCB documentation for DualSense Edge HGK-010 / CFI-ZSM1 X07, in Polish and English." data-pl="Interaktywna dokumentacja PCB DualSense Edge HGK-010 / CFI-ZSM1 X07, po polsku i angielsku.">Interactive PCB documentation for DualSense Edge HGK-010 / CFI-ZSM1 X07, in Polish and English.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-maps-dualsense-edge-x07-review/" data-en="OPEN PROJECT" data-pl="OTWÓRZ PROJEKT">OPEN PROJECT</a><a class="button" href="https://github.com/modyfikatorcasper/modi-maps-dualsense-edge-x07-review">GitHub</a></div></article><article class="card"><span class="status soon">COMING SOON</span><h3>PlayStation · Xbox · Nintendo</h3><p data-en="Further controller revisions and families are planned. DualSense Edge X07 is already available as its own project above." data-pl="Kolejne rewizje i rodziny kontrolerów są planowane. DualSense Edge X07 jest już dostępny jako osobny projekt obok.">Kolejne rewizje i rodziny kontrolerów są planowane. DualSense Edge X07 jest już dostępny jako osobny projekt obok.</p><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/controllers" data-en="CONTROLLER STRUCTURE" data-pl="STRUKTURA KONTROLERÓW">CONTROLLER STRUCTURE</a></article></div></div></section>
-<section id="modifications"><div class="wrap"><div class="eyebrow">MODIFICATIONS</div><h2 data-en="Hardware and software modifications" data-pl="Modyfikacje sprzętu i oprogramowania">Modyfikacje sprzętu i oprogramowania</h2><p data-en="A planned home for documented modifications and experiments, including OC/UV. Current branches are placeholders; they do not claim validated procedures." data-pl="Planowane miejsce dla opisanych modyfikacji i eksperymentów, w tym OC/UV. Obecne gałęzie są szkieletem; nie deklarują zweryfikowanych procedur.">Planowane miejsce dla opisanych modyfikacji i eksperymentów, w tym OC/UV. Obecne gałęzie są szkieletem; nie deklarują zweryfikowanych procedur.</p><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/modifications" data-en="OPEN STRUCTURE" data-pl="OTWÓRZ STRUKTURĘ">OPEN STRUCTURE</a></div></section>
-<section id="research"><div class="wrap"><div class="eyebrow">RESEARCH / LAB NOTES</div><h2 data-en="Ideas, experiments and evidence" data-pl="Pomysły, eksperymenty i dowody">Pomysły, eksperymenty i dowody</h2><p data-en="Research and reverse engineering take time. Record successful tests and failed attempts, keep authorship clear, and distinguish an idea from a verified capability." data-pl="Research i reverse engineering wymagają czasu. Zapisujemy udane testy i nieudane próby, jasno wskazujemy autorstwo i odróżniamy pomysł od potwierdzonej funkcji.">Research i reverse engineering wymagają czasu. Zapisujemy udane testy i nieudane próby, jasno wskazujemy autorstwo i odróżniamy pomysł od potwierdzonej funkcji.</p><div class="grid" style="margin:24px 0"><article class="card"><span class="status">COMMUNITY RESEARCH</span><h3>MODI Nintendo Switch 2 Screen Identifier</h3><p data-en="Community screen research by Modyfikator89: panel markings, serial observations and public reports. Two starting observations describe the same original-style screen assembly. No verified serial-to-screen rule yet." data-pl="Społecznościowe badania ekranów autorstwa Modyfikator89: oznaczenia paneli, obserwacje numerów i publiczne zgłoszenia. Dwie obserwacje startowe opisują ten sam ekran o pierwotnej konstrukcji. Brak potwierdzonej reguły numer → ekran.">Społecznościowe badania ekranów autorstwa Modyfikator89: oznaczenia paneli, obserwacje numerów i publiczne zgłoszenia. Dwie obserwacje startowe opisują ten sam ekran o pierwotnej konstrukcji. Brak potwierdzonej reguły numer → ekran.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-switch2-identifier/?lang=pl">PL</a><a class="button" href="https://modyfikatorcasper.github.io/modi-switch2-identifier/?lang=en">EN</a><a class="button" href="https://github.com/modyfikatorcasper/modi-switch2-identifier">GitHub</a></div></article><article class="card"><span class="status">RESEARCH / PROJECT ACCESS</span><h3>MODI PS3 Flash</h3><p data-en="PS3 Future Flash project. Access and supported operations follow the project’s own instructions." data-pl="Projekt PS3 Future Flash. Dostęp i obsługiwane operacje są opisane w instrukcjach projektu.">Projekt PS3 Future Flash. Dostęp i obsługiwane operacje są opisane w instrukcjach projektu.</p><div class="actions"><a class="button primary" href="https://modyfikatorcasper.github.io/modi-ps3-flash/" data-en="OPEN PROJECT" data-pl="OTWÓRZ PROJEKT">OTWÓRZ PROJEKT</a><a class="button" href="https://github.com/modyfikatorcasper/modi-ps3-flash">GitHub</a></div></article></div><div class="links"><a class="button" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/#devlog">FLASHSHIP / ULTIMATE · DEVLOG</a><a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/research" data-en="RESEARCH DOCUMENTATION" data-pl="DOKUMENTACJA BADAŃ">RESEARCH DOCUMENTATION</a></div><p class="notice" data-en="IDEA · RESEARCH · PROTOTYPE · TESTED · VERIFIED — always with the scope of the result." data-pl="IDEA · RESEARCH · PROTOTYPE · TESTED · VERIFIED — zawsze z zakresem danego wyniku.">IDEA · RESEARCH · PROTOTYPE · TESTED · VERIFIED — zawsze z zakresem danego wyniku.</p></div></section>
-</main><footer class="footer wrap"><b>MODI Diagnostic Lab · Kacper Lewandowski / Modyfikator89</b><p data-en="Independent community project. Project-specific credits, notices and licenses remain in each repository." data-pl="Niezależny projekt społecznościowy. Autorzy, notices i licencje poszczególnych narzędzi pozostają w ich repozytoriach.">Niezależny projekt społecznościowy. Autorzy, notices i licencje poszczególnych narzędzi pozostają w ich repozytoriach.</p><a href="https://github.com/modyfikatorcasper/modyfikatorcasper.github.io">GitHub · MODI Diagnostic Lab</a></footer>
-<script>
-function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('[data-en][data-pl]').forEach(el=>{const value=el.dataset[lang];if(el.tagName==='H1'){el.replaceChildren(...value.split('<br>').flatMap((s,i)=>i?[document.createElement('br'),document.createTextNode(s)]:[document.createTextNode(s)]))}else el.textContent=value});for(const code of ['pl','en'])document.getElementById(code).setAttribute('aria-pressed',String(code===lang));try{localStorage.setItem('modi-lab-lang',lang)}catch{}}
-document.getElementById('pl').onclick=()=>setLang('pl');document.getElementById('en').onclick=()=>setLang('en');let saved;try{saved=localStorage.getItem('modi-lab-lang')}catch{}setLang(saved==='en'?'en':'pl');
-</script></body></html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All MODI Projects in One Place | MODI Diagnostic Lab</title>
+  <meta name="description" content="Projekty Modyfikatora89: narzędzia serwisowe, mapy płyt konsol, dokumentacja kontrolerów, modyfikacje i badania.">
+  <meta name="theme-color" content="#090d0b">
+  <link rel="canonical" href="https://modyfikatorcasper.github.io/">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d0b;
+      --card: #101711;
+      --line: #2b3b2c;
+      --green: #bdff47;
+      --text: #edf3e8;
+      --muted: #a7b5a6;
+      --scroll-offset: 82px;
+    }
+    * { box-sizing: border-box }
+    html { scroll-padding-top: var(--scroll-offset) }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, sans-serif }
+    a { color: inherit; text-decoration: none }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 4px }
+    .wrap { width: min(1152px, 100% - 48px); margin-inline: auto }
+    .site-header { position: sticky; z-index: 2; top: 0; background: #090d0bf5; border-bottom: 1px solid var(--line) }
+    .bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 13px }
+    .brand { flex: none; border-left: 3px solid var(--green); padding-left: 10px; line-height: 1 }
+    .brand strong { display: block; font-size: 24px; letter-spacing: .02em }
+    .brand small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .12em }
+    nav { display: flex; flex-wrap: wrap; gap: clamp(10px, 2.2vw, 27px) }
+    nav a { color: var(--muted); padding-block: 6px; font-size: 14px; font-weight: 650; white-space: nowrap }
+    nav a:hover, .footer a:hover { color: var(--green) }
+    .languages { display: flex; gap: 4px }
+    .languages button { padding: 7px 9px; border: 1px solid var(--line); border-radius: 5px; color: var(--muted); background: transparent; font: inherit; font-size: 12px; font-weight: 750; cursor: pointer }
+    .languages button[aria-pressed="true"] { color: #14210b; border-color: var(--green); background: var(--green) }
+    .hero {
+      padding: clamp(48px, 8vw, 100px) 0 clamp(42px, 6vw, 76px);
+      background: radial-gradient(ellipse at 74% 14%, #233a1a 0%, transparent 62%), var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero h1 { margin: 0; font-size: clamp(40px, 6.8vw, 79px); font-weight: 790; line-height: 1.02; letter-spacing: -.06em }
+    .hero h1 span { display: block; color: var(--green) }
+    .hero p { max-width: 650px; margin: 22px 0 0; color: var(--muted); font-size: clamp(16px, 2.2vw, 20px) }
+    section { padding-block: 36px }
+    section + section { border-top: 1px solid var(--line) }
+    h2 { margin: 0 0 18px; font-size: clamp(24px, 4vw, 32px); line-height: 1.2; letter-spacing: -.025em }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px }
+    .card {
+      display: grid;
+      grid-template-columns: 88px minmax(0, 1fr);
+      align-items: start;
+      gap: 16px;
+      min-width: 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--card);
+    }
+    .card:focus-within, .card:hover { border-color: #547149 }
+    .thumb { display: grid; place-items: center; width: 100%; aspect-ratio: 1; overflow: hidden; border: 1px solid #344a34; border-radius: 9px; background: radial-gradient(circle at 35% 20%, #223b1d, #101810 80%) }
+    .thumb img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 8px }
+    .thumb .pcb { padding: 4px }
+    .thumb .sflash { width: 100%; height: 100%; padding: 0; object-fit: cover; object-position: center top }
+    .thumb .mark { border: 1px solid #78a959; padding: 4px 6px; border-radius: 3px; color: var(--green); font: 750 12px/1.15 ui-monospace, monospace; letter-spacing: .035em; text-align: center; box-shadow: 0 0 0 4px #54714944 }
+    .thumb .screen { width: 49%; aspect-ratio: 1.8; border: 1px solid #a5df72; border-radius: 2px; background: #193325; box-shadow: -5px 0 #62a888, 5px 0 #a87b64 }
+    .thumb .barcode { width: 57%; padding: 3px; border: 1px solid #78a959; border-radius: 3px; color: var(--green); font: 750 10px/1.2 ui-monospace, monospace; text-align: center }
+    .barcode::before { display: block; height: 14px; margin-bottom: 2px; background: repeating-linear-gradient(90deg, #bdff47 0 1px, transparent 1px 3px, #bdff47 3px 5px, transparent 5px 8px); content: "" }
+    .card-body { display: flex; flex-direction: column; min-height: 100%; min-width: 0 }
+    h3 { margin: 0; font-size: 18px; line-height: 1.26; letter-spacing: -.012em }
+    .card p { margin: 8px 0 14px; color: var(--muted); font-size: 14px; line-height: 1.48 }
+    .actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 11px; border: 1px solid #3b5038; border-radius: 6px; color: var(--text); font-size: 12px; font-weight: 750 }
+    .button:hover { background: #263a22; border-color: var(--green) }
+    .primary { color: #12200b; background: var(--green); border-color: var(--green) }
+    .primary:hover { background: #d3ff91 }
+    .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; padding-block: 22px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line) }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }
+    @media (max-width: 780px) {
+      :root { --scroll-offset: 112px }
+      .wrap { width: calc(100% - 32px) }
+      .bar { flex-wrap: wrap; row-gap: 5px; padding-block: 10px }
+      nav { order: 1; width: 100%; column-gap: 12px; row-gap: 0 }
+      nav a { font-size: 13px }
+      .card { grid-template-columns: 68px minmax(0, 1fr); gap: 12px; padding: 14px }
+    }
+    @media (max-width: 650px) { .grid { grid-template-columns: 1fr } }
+    @media (max-width: 370px) {
+      :root { --scroll-offset: 138px }
+      .card { grid-template-columns: 56px minmax(0, 1fr) }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar wrap">
+      <a class="brand" href="#top"><strong>MODI</strong><small>DIAGNOSTIC LAB</small></a>
+      <nav aria-label="Działy projektów" data-label-pl="Działy projektów" data-label-en="Project categories">
+        <a href="#tools" data-pl="Narzędzia" data-en="Tools">Narzędzia</a>
+        <a href="#maps" data-pl="Mapy" data-en="Maps">Mapy</a>
+        <a href="#controllers" data-pl="Kontrolery" data-en="Controllers">Kontrolery</a>
+        <a href="#modifications" data-pl="Modyfikacje" data-en="Modifications">Modyfikacje</a>
+        <a href="#research" data-pl="Badania" data-en="Research">Badania</a>
+      </nav>
+      <div class="languages" role="group" aria-label="Język" data-label-pl="Język" data-label-en="Language">
+        <button type="button" data-lang="pl" lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <h1 lang="en">All MODI Projects <span>in One Place.</span></h1>
+        <p data-pl="Tu znajdziesz wszystkie moje publiczne projekty. Dla społeczności, hobbystów, serwisantów i hejterów 😈" data-en="All my public projects are here. For the community, hobbyists, repair techs, and haters 😈">Tu znajdziesz wszystkie moje publiczne projekty. Dla społeczności, hobbystów, serwisantów i hejterów 😈</p>
+      </div>
+    </div>
+    <section id="tools" aria-labelledby="tools-title">
+      <div class="wrap">
+        <h2 id="tools-title" data-pl="Narzędzia serwisowe" data-en="Service Tools">Narzędzia serwisowe</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><img class="sflash" src="/modi-sflash/assets/cover-nor-bios.jpg" alt="" width="88" height="88" loading="lazy"></div>
+            <div class="card-body">
+              <h3>MODI SFlash — PS5 NOR Backup</h3>
+              <p data-pl="Kopia PS5 NOR na USB z weryfikacją SHA-256." data-en="PS5 NOR dumper with SHA-256-verified USB backups.">Kopia PS5 NOR na USB z weryfikacją SHA-256.</p>
+              <div class="actions">
+                <a class="button primary" href="/modi-sflash/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-sflash">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><img class="" src="assets/portal/flashship.webp" alt="" width="88" height="88" loading="lazy"></div>
+            <div class="card-body">
+              <h3>MODI X360 ULTIMATE / FLASHSHIP</h3>
+              <p data-pl="Odczyt i zapis pamięci NAND oraz eMMC Xbox 360 za pomocą RP2350." data-en="Read and write Xbox 360 NAND and eMMC with RP2350.">Odczyt i zapis pamięci NAND oraz eMMC Xbox 360 za pomocą RP2350.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/modi-pico2-flasher-x360-turbo/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-pico2-flasher-x360-turbo">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><span class="barcode">PS5</span></div>
+            <div class="card-body">
+              <h3>MODI JB Checker</h3>
+              <p data-pl="Sprawdź fabryczny firmware PS5 na podstawie numeru seryjnego." data-en="Look up PS5 factory firmware by serial number.">Sprawdź fabryczny firmware PS5 na podstawie numeru seryjnego.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/modi-jb-checker/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-jb-checker">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><span class="mark">PS3<br>FLASH</span></div>
+            <div class="card-body">
+              <h3>MODI PS3 Flash</h3>
+              <p data-pl="Kopia NOR i NAND na USB oraz przygotowanie pamięci flash z przeglądarki PS3 na firmware 4.93." data-en="Back up NOR and NAND to USB and prepare the flash from the PS3 browser on firmware 4.93.">Kopia NOR i NAND na USB oraz przygotowanie pamięci flash z przeglądarki PS3 na firmware 4.93.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/modi-ps3-flash/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-ps3-flash">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="maps" aria-labelledby="maps-title">
+      <div class="wrap">
+        <h2 id="maps-title" data-pl="Mapy konsol" data-en="Console Maps">Mapy konsol</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><img class="pcb" src="assets/portal/xbox-maps.webp" alt="" width="88" height="88" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Xbox 360 Console Maps · Trinity / Jasper V1</h3>
+              <p data-pl="Widoki PCB, punkty pomiarowe, kody błędów i ścieżki zasilania. Podgląd w rozwoju." data-en="PCB views, test points, error codes, and power paths. Development preview.">Widoki PCB, punkty pomiarowe, kody błędów i ścieżki zasilania. Podgląd w rozwoju.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/Xbox-360-Diagnostic-Maps-/maps/xbox/xbox-360/console-maps/dist/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" id="southbridge">
+            <div class="thumb" aria-hidden="true"><span class="mark">PS5<br>BGA</span></div>
+            <div class="card-body">
+              <h3>MODI Maps · PS5 Southbridge</h3>
+              <p data-pl="Dokumentacja mostka PS5: pinout BGA, rewizje i różnice w obsłudze HDMI." data-en="PS5 Southbridge documentation covering BGA pinout, revisions, and HDMI differences.">Dokumentacja mostka PS5: pinout BGA, rewizje i różnice w obsłudze HDMI.</p>
+              <div class="actions">
+                <a class="button primary" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/maps/playstation/ps5/southbridge" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="controllers" aria-labelledby="controllers-title">
+      <div class="wrap">
+        <h2 id="controllers-title" data-pl="Kontrolery" data-en="Controllers">Kontrolery</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><img class="pcb" src="assets/portal/dualsense-edge.webp" alt="" width="88" height="88" loading="lazy"></div>
+            <div class="card-body">
+              <h3>MODI Maps · DualSense Edge X07</h3>
+              <p data-pl="Interaktywna mapa PCB DualSense Edge HGK-010 / CFI-ZSM1 X07." data-en="Interactive PCB map for the DualSense Edge HGK-010 / CFI-ZSM1 X07.">Interaktywna mapa PCB DualSense Edge HGK-010 / CFI-ZSM1 X07.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/modi-maps-dualsense-edge-x07-review/" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-maps-dualsense-edge-x07-review">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="modifications" aria-labelledby="modifications-title">
+      <div class="wrap">
+        <h2 id="modifications-title" data-pl="Modyfikacje" data-en="Modifications">Modyfikacje</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><span class="mark">OC / UV</span></div>
+            <div class="card-body">
+              <h3 data-pl="Modyfikacje konsol" data-en="Console Modifications">Modyfikacje konsol</h3>
+              <p data-pl="Struktura dokumentacji modyfikacji dla PlayStation, Xbox i Nintendo, w tym planowanych prac nad OC i UV." data-en="Documentation structure for PlayStation, Xbox, and Nintendo mods, including planned OC and UV work.">Struktura dokumentacji modyfikacji dla PlayStation, Xbox i Nintendo, w tym planowanych prac nad OC i UV.</p>
+              <div class="actions">
+                <a class="button primary" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/modifications" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <h2 id="research-title" data-pl="Badania" data-en="Research">Badania</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><span class="screen"></span></div>
+            <div class="card-body">
+              <h3>MODI Nintendo Switch 2 Screen Identifier</h3>
+              <p data-pl="Badania rewizji ekranów Switch 2 na podstawie oznaczeń paneli i zgłoszeń społeczności." data-en="Research into Switch 2 screen revisions using panel markings and community reports.">Badania rewizji ekranów Switch 2 na podstawie oznaczeń paneli i zgłoszeń społeczności.</p>
+              <div class="actions">
+                <a class="button primary" href="https://modyfikatorcasper.github.io/modi-switch2-identifier/?lang=pl" data-project-lang data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/modi-switch2-identifier">GitHub</a>
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb" aria-hidden="true"><span class="mark">R&amp;D</span></div>
+            <div class="card-body">
+              <h3 data-pl="Notatki z badań MODI" data-en="MODI Research Notes">Notatki z badań MODI</h3>
+              <p data-pl="Dokumentacja eksperymentów z audio Jasper na RP2040 i trybami wyjścia HD Xbox 360 w XeFU." data-en="Research notes on Jasper audio with RP2040 and Xbox 360 HD output modes in XeFU.">Dokumentacja eksperymentów z audio Jasper na RP2040 i trybami wyjścia HD Xbox 360 w XeFU.</p>
+              <div class="actions">
+                <a class="button primary" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-/tree/main/research" data-pl="Otwórz projekt" data-en="Open project">Otwórz projekt</a>
+                <a class="button" href="https://github.com/modyfikatorcasper/Xbox-360-Diagnostic-Maps-">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap">
+    <span>MODI Diagnostic Lab · Kacper Lewandowski / Modyfikator89</span>
+    <a href="https://github.com/modyfikatorcasper/modyfikatorcasper.github.io">GitHub · MODI Diagnostic Lab</a>
+  </footer>
+  <script>
+    const languageButtons = document.querySelectorAll('[data-lang]');
+    const projectLanguageLink = document.querySelector('[data-project-lang]');
+
+    function setLanguage(language) {
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-pl][data-en]').forEach(element => {
+        element.textContent = element.dataset[language];
+      });
+      document.querySelectorAll('[data-label-pl][data-label-en]').forEach(element => {
+        element.setAttribute('aria-label', element.getAttribute('data-label-' + language));
+      });
+      languageButtons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.lang === language));
+      });
+
+      const projectUrl = new URL(projectLanguageLink.href);
+      projectUrl.searchParams.set('lang', language);
+      projectLanguageLink.href = projectUrl.href;
+      try { localStorage.setItem('modi-lab-lang', language); } catch {}
+    }
+
+    languageButtons.forEach(button => {
+      button.addEventListener('click', () => setLanguage(button.dataset.lang));
+    });
+    let savedLanguage;
+    try { savedLanguage = localStorage.getItem('modi-lab-lang'); } catch {}
+    if (savedLanguage === 'en') setLanguage('en');
+  </script>
+</body>
+</html>
