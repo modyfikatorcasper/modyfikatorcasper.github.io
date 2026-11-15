@@ -1,6 +1,8 @@
-# MODI SFlash Beta 1
+# MODI SFlash — PS5 NOR Backup & NOR Dumper
 
-![MODI SFlash](assets/cover-memory.png)
+[Standalone project repository](https://github.com/modyfikatorcasper/modi-sflash)
+
+![MODI SFlash — NORBIOS and PS5 NOR backup to USB](assets/cover-norbios.jpg)
 
 **A breakthrough in simplicity. Back up your PS5 SFlash before you mess with it.**
 
